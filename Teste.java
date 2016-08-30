@@ -75,7 +75,7 @@ public class Teste{
 			
 		
 		for(i = 0; i<=(vetor.length-1); i++){
-			msg = msg + "\nNome: " + vetor[i].getNome() + "\nSalário: " + vetor[i].getSalario();
+			msg = msg + "\nNome: " + vetor[i].getNome() + "\nSalÃ¡rio: " + vetor[i].getSalario();
 		}
 		
 		JOptionPane.showMessageDialog(null, msg);
@@ -116,7 +116,7 @@ public class Teste{
 		}
 		for(i=0; i< vetor.length; i++){
 			if(vetor[i]!= null){
-				msg = msg + "\nPosição: " + i + "\nNome: " + vetor[i].getNome() + "\nSalário: " + vetor[i].getSalario();
+				msg = msg + "\nPosiÃ§Ã£o: " + i + "\nNome: " + vetor[i].getNome() + "\nSalÃ¡rio: " + vetor[i].getSalario();
 			}	
 		}
 		JOptionPane.showMessageDialog(null, msg);
@@ -127,13 +127,13 @@ public class Teste{
 			short iVetor = numero("Qual o tamanho do vetor?");
 			Funcionarios[] vetorFuncionario = new Funcionarios[iVetor];
 			int i = 0;
-			while(i< iVetor && pergunta("Deseja cadastrar um funcionário?", "Cadastrar") == 0){
-				Funcionarios funcionario = new Funcionarios(texto("Nome:"), real("Salário:"), numero("Faltas: "), texto("Cargo: "));
+			while(i< iVetor && pergunta("Deseja cadastrar um funcionÃ¡rio?", "Cadastrar") == 0){
+				Funcionarios funcionario = new Funcionarios(texto("Nome:"), real("SalÃ¡rio:"), numero("Faltas: "), texto("Cargo: "));
 				vetorFuncionario[i] = funcionario;
 				i++;
 			}
-			JOptionPane.showMessageDialog(null, "Total de funcionários cadastrados: " + totalFuncionarios(vetorFuncionario));
-			JOptionPane.showMessageDialog(null,	"Média de salarios cadastrados: R$" + mediaSalario(vetorFuncionario));
+			JOptionPane.showMessageDialog(null, "Total de funcionÃ¡rios cadastrados: " + totalFuncionarios(vetorFuncionario));
+			JOptionPane.showMessageDialog(null,	"MÃ©dia de salarios cadastrados: R$" + mediaSalario(vetorFuncionario));
 			JOptionPane.showMessageDialog(null,	"Total de salarios cadastrados: R$" + totalSalario(vetorFuncionario));
 			nomes(vetorFuncionario);
 			salarios(vetorFuncionario);
@@ -141,6 +141,10 @@ public class Teste{
 			deletar(vetorFuncionario);
 		}catch(Exception e){
 			throw new Excecao("Alguma coisa deu errado!\n", e);
+		}
+		int k = 0;
+		for (k = 0; k < 5; k++){
+			JOptionPane.showMessageDialog(null, "Joyce feduminha");
 		}
 	}
 }
